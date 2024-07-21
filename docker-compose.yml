@@ -3,13 +3,14 @@ version: '3'
 services:
   products-db:
     container_name: products-database
-    image: postgres:16.2
+    image: mysql:latest
     restart: always
     volumes:
-      - ./postgres:/var/lib/postgresql/data
+      - ./mysql-data:/var/lib/mysql
     ports:
-      - 5433:5433
+      - 3306:3306
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=123456
-      - POSTGRES_DB=productsdb
+      - MYSQL_USER=admin
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_PASSWORD=123456
+      - MYSQL_DATABASE=productsdb
