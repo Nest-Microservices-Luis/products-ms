@@ -10,7 +10,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      - MYSQL_USER=admin
+      - MYSQL_USER=lgcholoquinga
       - MYSQL_ROOT_PASSWORD=123456
       - MYSQL_PASSWORD=123456
       - MYSQL_DATABASE=productsdb
